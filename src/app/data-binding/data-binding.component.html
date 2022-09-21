@@ -1,0 +1,20 @@
+<h1>Trabalhando com interpolations</h1>
+<h3> -- Interpolantions -- </h3>
+<p>{{ nome }} tem {{ idade }} de idade</p>
+<p>Dentro de 2 anos {{ nome }} terá {{ idade + 2 }}</p>
+<p>{{ dataAtual | date }}</p>
+
+<h2>Property binding</h2>
+
+<button [disabled]="checkedDisabled">Botão desabilitado</button>
+
+<div class="imgPalhaco">
+  <img [src]="urlImg" [alt]="imgTitle" style="height: 100px; width: 150px; margin-top: 5px;">
+</div>
+<p></p>
+<h3>Event Binding</h3>
+<div (mousemove)="moseMoveEvent($event)" style="background: blue; height: 250px; width: 250px">
+</div>
+{{ position.x }} - {{ position.y }}
+
+
