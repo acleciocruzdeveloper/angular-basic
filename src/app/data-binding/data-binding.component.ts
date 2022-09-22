@@ -11,7 +11,7 @@ export class DataBindingComponent implements OnInit {
   public idade: number = 43;
   public dataAtual: Date = new Date();
 
-  public position: {x: number, y: number } = {
+  public position: { x: number, y: number } = {
     x: 0,
     y: 0
   };
@@ -27,7 +27,7 @@ export class DataBindingComponent implements OnInit {
   }
 
   moseMoveEvent(valor: MouseEvent) {
-    console.log(valor);
+
     this.position.x = valor.offsetX;
     this.position.y = valor.offsetY;
 
