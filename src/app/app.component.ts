@@ -3,7 +3,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template: `
-  <app-data-binding></app-data-binding>
+  <diretivas-estruturais></diretivas-estruturais>
   <router-outlet></router-outlet>`
 })
 

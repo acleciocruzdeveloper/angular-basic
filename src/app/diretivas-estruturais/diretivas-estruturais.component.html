@@ -1,0 +1,35 @@
+<p *ngIf="condition; else elseBlock">diretivas ngIf True</p>
+
+<p>
+  <ng-template #elseBlock>
+    <p>diretivas ngIf False</p>
+  </ng-template>
+</p>
+
+
+<hr>
+
+<p *ngIf="conditionClick">
+  Agora true;
+</p>
+<p *ngIf="!conditionClick">
+  Agora false;
+</p>
+
+<button (click)="onClick()">Mudar Condição</button>
+
+<h2>Relatóriio de Pedido</h2>
+
+<ul>
+  <li *ngFor="let item of listLanche; let i = index" (click)="apagarItem(i)">{{i}} - {{item.descricao}} - {{item.qtde}}</li>
+</ul>
+
+<button (click)="addItem()">Adicionar Item na Lista</button>
+
+<hr>
+<input type="text" [(ngModel)]="nome">
+<div [ngSwitch]="nome">
+  <p *ngSwitchCase="'nome'">Aclécio de Souza Cruz</p>
+  <p *ngSwitchCase="'nay'">Nay Figueiredo Avila</p>
+  <p *ngSwitchDefault>Digite o nome</p>
+</div>
