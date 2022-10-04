@@ -1,0 +1,30 @@
+.active {
+  background: blue;
+  color: white;
+  height: 50px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+
+  p {
+    display: flex;
+    margin: auto;
+  }
+}
+
+.disable {
+  background: red;
+  color: greenyellow;
+  height: 50px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+
+  p {
+    display: flex;
+    margin: auto;
+  }
+
+}

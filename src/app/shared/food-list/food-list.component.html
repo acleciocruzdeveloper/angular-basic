@@ -1,0 +1,4 @@
+<p *ngFor="let item of geData">
+  [{{ item.id }}] - {{item.name}}
+  <button (click)="foodListDelete(item.id)"></button>
+</p>
