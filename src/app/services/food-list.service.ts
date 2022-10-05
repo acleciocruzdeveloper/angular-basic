@@ -44,7 +44,7 @@ export class FoodListService {
   }
 
   foodListEdit(value: string, id: number): Observable<FoodList> {
-    return this.httpClient.put<FoodList>(`${this.url}list-food/${id}`, { name: value })
+    return this.httpClient.put<FoodList>(`${this.url}foodList/${id}`, { name: value })
       .pipe(
         res => res,
         error => error
@@ -52,7 +52,7 @@ export class FoodListService {
   }
 
   foodListDelete(id: number): Observable<FoodList> {
-    return this.httpClient.delete<FoodList>(`${this.url}/${id}`)
+    return this.httpClient.delete<FoodList>(`${this.url}foodList/${id}`)
     .pipe(
       res => res,
       err => err

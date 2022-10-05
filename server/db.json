@@ -1,3 +1,8 @@
 {
-  "foodList": []
+  "foodList": [
+    {
+      "name": "Laranja",
+      "id": 1
+    }
+  ]
 }

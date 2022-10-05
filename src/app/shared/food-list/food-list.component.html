@@ -1,4 +1,7 @@
 <p *ngFor="let item of geData">
-  [{{ item.id }}] - {{item.name}}
-  <button (click)="foodListDelete(item.id)"></button>
+  [{{ item.id }}] -
+ <input type="text" [(ngModel)]="item.name" (keyup.enter)="foodListEdit(item.name, item.id)">
+  <button (click)="foodListDelete(item.id)">
+    Deletar item
+  </button>
 </p>

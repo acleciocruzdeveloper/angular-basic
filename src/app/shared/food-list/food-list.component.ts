@@ -16,9 +16,9 @@ export class FoodListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-  this.foodListService.sendData().subscribe(
-    res => this.geData = res
-  );
+    this.foodListService.sendData().subscribe(
+      res => this.geData = res
+    );
 
     this.foodListService.emitEvent.subscribe(
       res => {
@@ -30,16 +30,26 @@ export class FoodListComponent implements OnInit {
 
   foodListDelete(id: number) {
     return this.foodListService.foodListDelete(id)
-    .subscribe(
+      .subscribe(
+        res => {
+          this.geData = this.geData.filter(
+            item => {
+              return id != item.id;
+            }
+          )
+        },
+        err => err
+
+      )
+  }
+
+  foodListEdit(value: string, id: number){
+    this.foodListService.foodListEdit(value, id).subscribe(
       res => {
-        this.geData = this.geData.filter(
-          item => {
-            return id !== item.id;
-          }
-        )
+        return console.log(res)
       },
-      error => console.log(error)
-    );
+      error => error
+    )
   }
 
 }
